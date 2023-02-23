@@ -2,10 +2,10 @@ pipeline {
 agent { node { label 'maven' } }
 environment { APP_NAMESPACE = 'RHT_OCP4_DEV_USER-security-scans' } 
 stages {
-stage('Test') {=
+stage('Test') {
 steps {
-=dir('shopping-cart') {
-=sh './mvnw clean test'
+dir('shopping-cart') {
+sh './mvnw clean test'
 } 
 }
 }
